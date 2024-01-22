@@ -9,7 +9,7 @@ database = 'demosqlpro'
 username = 'solutionkraft'
 password = '{Solnkraft24}'
 driver = '{ODBC Driver 18 for SQL Server}'
-conn_str = f'DRIVER={driver};SERVER=tcp:{server},1433;DATABASE={database};UID={username};PWD={password}'
+conn_str = f'DRIVER={driver};SERVER=tcp:{server},1433;DATABASE={database};UID={username};PWD={password};Connect Timeout=60'
 conn=pyodbc.connect(conn_str)
 cursor=conn.cursor()
 app.config['SECRET_KEY'] = 'demoapp'
